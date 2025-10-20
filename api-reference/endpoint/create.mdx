@@ -2,3 +2,29 @@
 title: "Trigger workflow"
 openapi: "POST /plants"
 ---
+
+---
+
+import { ApiReference } from '@mintlify/components'
+
+# Envoy Workflow Trigger API
+
+This API allows you to trigger workflows in the Envoy staging environment.\
+Use the `/workflows/{workflowid}/trigger` endpoint to start workflow runs programmatically.
+
+---
+
+## Example Request
+
+```
+{
+  "route_number": "12345",
+  "phone_number": "+15551234567"
+}
+```
+
+## Notes
+
+- Make sure you include a valid **Bearer token** in the request headers.
+- The `workflowid` parameter is required and must be a valid UUID.
+- Responses include `status` and `workflow_run_id` on success.
