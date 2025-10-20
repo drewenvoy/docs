@@ -1,5 +1,5 @@
 {
-  "openapi": "3.1.0",
+  "openapi": "3.0.3",
   "info": {
     "title": "Envoy Workflow Trigger API",
     "description": "API for triggering workflows in the Envoy staging environment.",
@@ -40,14 +40,8 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "route_number": {
-                    "type": "string",
-                    "description": "Route number associated with the workflow."
-                  },
-                  "phone_number": {
-                    "type": "string",
-                    "description": "Phone number to associate with the workflow trigger. Must include country code (e.g., +1)."
-                  }
+                  "route_number": { "type": "string" },
+                  "phone_number": { "type": "string" }
                 },
                 "required": ["route_number", "phone_number"]
               },
@@ -66,14 +60,8 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "status": {
-                      "type": "string",
-                      "example": "success"
-                    },
-                    "workflow_run_id": {
-                      "type": "string",
-                      "description": "ID of the newly triggered workflow run."
-                    }
+                    "status": { "type": "string", "example": "success" },
+                    "workflow_run_id": { "type": "string" }
                   }
                 }
               }
@@ -97,12 +85,8 @@
               }
             }
           },
-          "401": {
-            "description": "Unauthorized - missing or invalid bearer token"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
+          "401": { "description": "Unauthorized - missing or invalid bearer token" },
+          "500": { "description": "Internal server error" }
         }
       }
     }
