@@ -16,9 +16,9 @@
           {
             "group": "Getting started",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "sign-up",
+              "first-workflow",
+              "faq"
             ]
           },
           {
