@@ -32,5 +32,5 @@ Use the `/workflows/{workflowid}/trigger` endpoint to start workflow runs progra
 
 - Make sure you include a valid **Bearer token** in the request headers.
 - The `workflowid` parameter is required and must be a valid UUID.
-- Sends a request like Request JSON body: { "shipment_updates": "notes" } to your api
+- Sends a request like Request JSON body: ```{"shipment_updates": "notes" }``` to your api
 - Responses include `status` and `workflow_run_id` on success.
